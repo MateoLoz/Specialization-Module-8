@@ -2,7 +2,7 @@
   "name": "api-tests",
   "type": "module",
   "scripts": {
-    "test:api": "mocha src/tests/**/*.js --timeout 10000",
+    "test:api": "mocha src/tests/**/*.js --timeout 10000 --reporter mocha-junit-reporter --reporter-options mochaFile=reports/api-results.xml",
     "test:auth": "mocha src/tests/auth.test.js",
     "test:booking": "mocha src/tests/booking.test.js",
     "lint": "eslint .",
@@ -23,6 +23,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
     "globals": "^17.4.0",
+    "mocha-junit-reporter": "^2.2.1",
     "prettier": "3.8.2"
   }
 }
